@@ -1,0 +1,14 @@
+[
+  {
+    "type" : "scenario",
+    "ident" : "heli_crash",
+    "copy-from" : "heli_crash",
+    "extend": { "professions" : [ "rifleman", "combat_medic", "machinegunner", "hecu" ] }
+  },
+  {
+    "type" : "scenario",
+    "ident": "lab_chal",
+    "copy-from" : "lab_chal",
+    "extend": { "professions" : [ "hecu" ] }
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "More_Military",
+    "name": "Military Professions Mod",
+    "authors": [ "Jebi Bones" ],
+    "maintainers": [ "Jebi Bones" ],
+    "description": "Adds new military themed classes, for those people who found their military itch was not scratched enough.",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  }
+]
