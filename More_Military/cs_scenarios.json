@@ -3,7 +3,7 @@
     "type" : "scenario",
     "ident" : "heli_crash",
     "copy-from" : "heli_crash",
-    "extend": { "professions" : [ "rifleman", "combat_medic", "machinegunner", "hecu" ] }
+    "extend": { "professions" : [ "reserve", "rifleman", "combat_medic", "machinegunner", "nco", "officer", "hecu" ] }
   },
   {
     "type" : "scenario",
