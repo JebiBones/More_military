@@ -1,11 +1,20 @@
 [
   {
+    "id": "badge_military",
+    "copy-from": "badge_abstract",
+    "type": "ARMOR",
+    "name": "Military dogtags",
+    "description": "A standard military dogtag who identifies its wearer as a member of the armed forces, if that means something now a days. It includes basic information of the owner.",
+    "color": "light_gray",
+    "flags": [ "COLLAR" ]
+  },
+  {
     "id": "hecu_gasmask",
     "type": "TOOL_ARMOR",
     "category": "armor",
     "name": "H.E.C.U Gasmask (off)",
     "description": "A basic gasmak, modified with state-of-the-art technology to acomodate to H.E.C.U's needs. It includes night vision, and an integrated HUD.",
-    "weight": 900,
+    "weight": 2500,
     "volume": 4,
     "price": 2500000,
     "to_hit": 1,
@@ -14,23 +23,23 @@
     "ammo": "battery",
     "use_action": {
             "type": "transform",
-            "msg": "You activate your nightvision.",
+            "msg": "Nightvision activated.",
             "target": "hecu_gasmask_on",
             "active": true,
             "need_charges": 1,
-            "need_charges_msg": "The %s's batteries are dead."
+            "need_charges_msg": "Insuficient power..."
            },
     "material": [ "plastic" ],
     "symbol": "[",
     "color": "dark_gray",
     "covers": [ "EYES", "MOUTH" ],
     "coverage": 100,
-    "encumbrance": 30,
+    "encumbrance": 40,
     "warmth": 20,
     "material_thickness": 2,
     "environmental_protection": 16,
     "qualities": [ [ "GLARE", 1 ] ],
-    "flags": [ "WATCH", "WATERPROOF", "BAROMETER", "STURDY", "PARTIAL_DEAF", "THERMOMETER", "SUN_GLASSES", "HYGROMETER", "VARSIZE", "GAS_PROOF", "USE_UPS", "NO_UNLOAD", "NO_RELOAD" ]
+    "flags": [ "WATCH", "WATERPROOF", "STURDY", "PARTIAL_DEAF", "SUN_GLASSES", "VARSIZE", "GAS_PROOF", "USE_UPS", "NO_UNLOAD", "NO_RELOAD" ]
 
   },
   {
@@ -39,7 +48,7 @@
     "category": "armor",
     "name": "H.E.C.U Gasmask (on)",
     "description": "A basic gasmak, modified with state-of-the-art technology to acomodate to H.E.C.U's needs. It includes night vision, and an integrated HUD.",
-    "weight": 900,
+    "weight": 2500,
     "volume": 4,
     "price": 2500000,
     "to_hit": -3,
@@ -51,7 +60,7 @@
         "use_action": {
             "type": "transform",
             "menu_text": "Turn off",
-            "msg": "Your nightvision deactivates.",
+            "msg": "Nightvision deactivated.",
             "target": "hecu_gasmask"
         },
     "material": [ "plastic" ],
@@ -64,7 +73,7 @@
     "material_thickness": 2,
     "environmental_protection": 16,
     "qualities": [ [ "GLARE", 1 ] ],
-    "flags": [ "WATCH", "WATERPROOF", "BAROMETER", "STURDY", "PARTIAL_DEAF", "THERMOMETER", "SUN_GLASSES", "HYGROMETER", "VARSIZE", "GNV_EFFECT", "TRADER_AVOID", "GAS_PROOF", "USE_UPS", "NO_UNLOAD", "NO_RELOAD" ]
+    "flags": [ "WATCH", "WATERPROOF", "STURDY", "PARTIAL_DEAF", "SUN_GLASSES", "VARSIZE", "GNV_EFFECT", "TRADER_AVOID", "GAS_PROOF", "USE_UPS", "NO_UNLOAD", "NO_RELOAD" ]
   },
   {
     "id": "pcv",
@@ -86,11 +95,11 @@
     "initial_charges": 0,
     "use_action": {
             "type": "transform",
-            "msg": "You activate your PCV, protective systems engaged.",
+            "msg": "PCV activated, protective systems engaged.",
             "target": "pcv_on",
             "active": true,
             "need_charges": 1,
-            "need_charges_msg": "The %s's batteries are dead." 
+            "need_charges_msg": "Insuficient power..." 
                   }, 
     "coverage": 85,
     "encumbrance": 7,
@@ -125,137 +134,63 @@
     "ammo": "battery",
     "max_charges": 0,
     "initial_charges": 0,
-    "turns_per_charge": 7,
+    "turns_per_charge": 5,
     "revert_to": "pcv",
         "use_action": {
             "type": "transform",
             "menu_text": "Turn off",
-            "msg": "Your PCV deactivates.",
+            "msg": "PCV deactivated.",
             "target": "pcv"
         },
-    "flags": [ "WATERPROOF", "STURDY", "VARSIZE", "RAD_RESIST", "kevlar_padded", "CLIMATE_CONTROL", "TRADER_AVOID", "ELECTRIC_IMMUNE", "GAS_PROOF", "USE_UPS", "NO_UNLOAD", "NO_RELOAD", "OUTER" ]
+    "flags": [ "WATERPROOF", "STURDY", "VARSIZE", "RAD_RESIST", "kevlar_padded", "CLIMATE_CONTROL", "TRADER_AVOID", "USE_UPS", "NO_UNLOAD", "NO_RELOAD", "OUTER" ]
   },
   {
     "id": "hecu_jacket",
+    "copy-from": "jacket_army",
     "type": "ARMOR",
     "name": "H.E.C.U jacket",
-    "description": "A tough jacket with lots of pockets, also it comes in a nice urban pattern camoflauge.  Favored by the H.E.C.U.",
-    "weight": 720,
-    "volume": 12,
-    "price": 3500,
-    "material": [ "cotton", "plastic" ],
-    "symbol": "[",
-    "color": "gray",
-    "covers": [ "TORSO", "ARMS" ],
-    "coverage": 95,
-    "encumbrance": 15,
-    "storage": 14,
-    "warmth": 30,
-    "material_thickness": 2,
-    "flags": [ "VARSIZE", "POCKETS" ]
-  },
+    "description": "A tough jacket with lots of pockets, also it comes in a nice urban camo pattern.  Favored by the H.E.C.U.",
+    "color": "gray"
+  },  
   {
     "id": "hecu_pants",
+    "copy-from": "pants_army",
     "type": "ARMOR",
     "name": "H.E.C.U pants",
-    "description": "A tough pair of pants lined with pockets, also it comes in a nice urban pattern camoflauge.  Favored by the H.E.C.U.",
-    "weight": 700,
-    "volume": 10,
-    "price": 3500,
-    "material": [ "cotton", "plastic" ],
-    "symbol": "[",
-    "color": "gray",
-    "covers": [ "LEGS" ],
-    "coverage": 95,
-    "encumbrance": 18,
-    "storage": 10,
-    "warmth": 30,
-    "material_thickness": 2,
-    "flags": [ "VARSIZE", "POCKETS" ]
+    "description": "A tough pair of pants lined with pockets, also it comes in a nice urban camo pattern.  Favored by the H.E.C.U.",
+    "color": "gray"
   },
   {
     "id": "hecu_helmet",
+    "copy-from": "helmet_army",
     "type": "ARMOR",
-    "category": "armor",
-    "name": "H.E.C.U Helmet",
-    "description": "An army helmet but in a nice urban pattern camoflauge.  Favored by the H.E.C.U.",
-    "weight": 1350,
-    "volume": 7,
-    "price": 15000,
-    "to_hit": -1,
-    "bashing": 10,
-    "material": [ "kevlar", "plastic" ],
-    "symbol": "[",
-    "color": "gray",
-    "covers": [ "HEAD" ],
-    "coverage": 95,
-    "encumbrance": 18,
-    "warmth": 20,
-    "material_thickness": 5,
-    "techniques": [ "WBLOCK_1" ],
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ]
+    "name": "H.E.C.U helmet",
+    "description": "An army helmet but in a nice urban camo pattern.  Favored by the H.E.C.U.",
+    "color": "gray"
   },
   {
     "id": "hecu_boots",
+    "copy-from": "boots_combat",
     "type": "ARMOR",
-    "category": "armor",
-    "name": "pair of combat boots (H.E.C.U)",
-    "name_plural": "pairs of combat boots (H.E.C.U)",
-    "description": "A pair of combat boots modified to fit to H.E.C.U's needs.",
-    "weight": 1000,
-    "volume": 8,
-    "price": 7000,
-    "to_hit": -1,
-    "bashing": 1,
-    "material": [ "kevlar", "leather" ],
-    "symbol": "[",
-    "color": "dark_gray",
-    "covers": [ "FEET" ],
-    "coverage": 100,
-    "encumbrance": 20,
-    "warmth": 30,
-    "material_thickness": 3,
-    "environmental_protection": 3,
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ]
-   },
-   {
+    "name": "H.E.C.U boots",
+    "description": "A pair of black combat boots commonly worn by the H.E.C.U.",
+    "color": "dark_gray"
+  },
+  {
     "id": "hecu_gloves",
+    "copy-from": "gloves_tactical",
     "type": "ARMOR",
-    "category": "armor",
-    "name": "pair of tactical fingerless gloves",
-    "name_plural": "pairs of tactical fingerless gloves",
-    "description": "A pair of leather gloves with no fingers, allowing greater manual dexterity.  These have been crudely reinforced with kevlar across the back.",
-    "weight": 300,
-    "volume": 2,
-    "price": 10000,
-    "to_hit": 2,
-    "material": [ "kevlar", "leather" ],
-    "symbol": "[",
-    "color": "dark_gray",
-    "covers": [ "HANDS" ],
+    "name": "H.E.C.U tactical fingerless gloves.",
+    "description": "Although not as protective as its full covered conterpart, it allows for better dexterty which the H.E.C.U finds it more important.",
+    "encumbrance": 10,
     "coverage": 50,
-    "encumbrance": 2,
-    "warmth": 6,
-    "material_thickness": 1,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY" ,"ALLOWS_NATURAL_ATTACKS" ]
+    "warmth": 15
   },
   {
     "id": "hecu_backpack",
+    "copy-from": "molle_pack",
     "type": "ARMOR",
     "name": "H.E.C.U backpack",
-    "description": "Based on the MOLLE backpack's design, this backpack strikes a fine balance between storage space and encumbrance, while allowing for mobility.",
-    "weight": 950,
-    "volume": 12,
-    "price": 8000,
-    "material": [ "cotton", "kevlar" ],
-    "symbol": "[",
-    "color": "green",
-    "covers": [ "TORSO" ],
-    "coverage": 35,
-    "encumbrance": 8,
-    "storage": 50,
-    "warmth": 10,
-    "material_thickness": 2,
-    "flags": [ "BELTED", "WATER_FRIENDLY" ]
+    "description": "Based on the MOLLE backpack's design, this backpack strikes a fine balance between storage space and encumbrance, while allowing for better mobility."
   }
 ]
